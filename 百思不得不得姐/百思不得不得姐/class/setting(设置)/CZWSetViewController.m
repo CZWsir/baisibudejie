@@ -9,6 +9,7 @@
 #import "CZWSetViewController.h"
 #import <UIImageView+WebCache.h>
 #import <SDImageCache.h>
+#import "CZWFileManager.h"
 @implementation CZWSetViewController
 - (void)viewDidLoad
 {
@@ -33,27 +34,29 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    NSFileManager *file = [NSFileManager defaultManager];
+//    NSFileManager *file = [NSFileManager defaultManager];
     
      NSString *cacheStr = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).firstObject;
+//    NSLog(@"%@",cacheStr);
     NSLog(@"%@",cacheStr);
-  
-    NSArray *DirctArray = [file contentsOfDirectoryAtPath:cacheStr error:nil];
-    
-    for (NSString *path in DirctArray) {
-        if ([path containsString:@".DS"]) continue;
-        
-       NSString *filePath = [cacheStr stringByAppendingPathComponent:path];
-      
-        [file removeItemAtPath:filePath error:nil];
-    }
+    [CZWFileManager removeDirectoryPath:cacheStr];
+//    NSArray *DirctArray = [file contentsOfDirectoryAtPath:cacheStr error:nil];
+//    
+//    for (NSString *path in DirctArray) {
+//        if ([path containsString:@".DS"]) continue;
+//        
+//       NSString *filePath = [cacheStr stringByAppendingPathComponent:path];
+//      
+//        [file removeItemAtPath:filePath error:nil];
+//    }
     [self.tableView reloadData];
 }
 - (NSString *)getCellString
 {
     NSString *pathStr = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).firstObject;
 //    NSLog(@"%@",pathStr);
-    NSInteger size = [self getFileSizeWithPath:pathStr];
+    NSInteger size = [CZWFileManager getFileSizeWithPath:pathStr];
+    NSLog(@"%ld",size);
     NSString *str = nil;
     if (size > 1000 * 1000) {
         CGFloat MB = 1.0 * size / (1000 * 1000);

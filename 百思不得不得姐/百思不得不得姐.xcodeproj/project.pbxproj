@@ -32,6 +32,7 @@
 		4080BED71D1C133800A250A0 /* CZWWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4080BED51D1C133800A250A0 /* CZWWebViewController.m */; };
 		4080BED81D1C133800A250A0 /* CZWWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4080BED61D1C133800A250A0 /* CZWWebViewController.xib */; };
 		4080BEDA1D1C142500A250A0 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4080BED91D1C142500A250A0 /* WebKit.framework */; };
+		4080BEE21D1C4BBB00A250A0 /* CZWFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4080BEE11D1C4BBB00A250A0 /* CZWFileManager.m */; };
 		4083216B1D1B7BEF00E4BCE3 /* CZWLogginButtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 4083216A1D1B7BEF00E4BCE3 /* CZWLogginButtn.m */; };
 		4083216E1D1B8B6E00E4BCE3 /* CZWTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4083216D1D1B8B6E00E4BCE3 /* CZWTextField.m */; };
 		408AD4091D1A85A900998394 /* CZWTagTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 408AD4081D1A85A900998394 /* CZWTagTableViewController.m */; };
@@ -106,6 +107,8 @@
 		4080BED51D1C133800A250A0 /* CZWWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZWWebViewController.m; sourceTree = "<group>"; };
 		4080BED61D1C133800A250A0 /* CZWWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CZWWebViewController.xib; sourceTree = "<group>"; };
 		4080BED91D1C142500A250A0 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		4080BEE01D1C4BBB00A250A0 /* CZWFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZWFileManager.h; sourceTree = "<group>"; };
+		4080BEE11D1C4BBB00A250A0 /* CZWFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZWFileManager.m; sourceTree = "<group>"; };
 		408321691D1B7BEF00E4BCE3 /* CZWLogginButtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZWLogginButtn.h; sourceTree = "<group>"; };
 		4083216A1D1B7BEF00E4BCE3 /* CZWLogginButtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZWLogginButtn.m; sourceTree = "<group>"; };
 		4083216C1D1B8B6E00E4BCE3 /* CZWTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZWTextField.h; sourceTree = "<group>"; };
@@ -210,6 +213,7 @@
 		40139AEE1D142B0200DBD61C /* class */ = {
 			isa = PBXGroup;
 			children = (
+				4080BEDF1D1C4B7500A250A0 /* tools(工具) */,
 				40E69D0C1D16BEC90013F316 /* setting(设置) */,
 				40A3910C1D17CBD10049F078 /* advert(广告) */,
 				40139B101D142BF700DBD61C /* main */,
@@ -484,6 +488,15 @@
 			path = category;
 			sourceTree = "<group>";
 		};
+		4080BEDF1D1C4B7500A250A0 /* tools(工具) */ = {
+			isa = PBXGroup;
+			children = (
+				4080BEE01D1C4BBB00A250A0 /* CZWFileManager.h */,
+				4080BEE11D1C4BBB00A250A0 /* CZWFileManager.m */,
+			);
+			path = "tools(工具)";
+			sourceTree = "<group>";
+		};
 		40A3910C1D17CBD10049F078 /* advert(广告) */ = {
 			isa = PBXGroup;
 			children = (
@@ -693,6 +706,7 @@
 				40139B231D142FFC00DBD61C /* CZWPublicViewController.m in Sources */,
 				40139AD91D140AE200DBD61C /* main.m in Sources */,
 				40139B2D1D143CEB00DBD61C /* CZWAnimateViewController.m in Sources */,
+				4080BEE21D1C4BBB00A250A0 /* CZWFileManager.m in Sources */,
 				404C11BE1D15A2BE00408A8D /* UIView+bs_frame.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
