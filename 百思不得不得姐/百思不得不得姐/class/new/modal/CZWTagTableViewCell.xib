@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="subtag" id="W31-8a-PvA" customClass="CZWTagTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="420" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sh4-0W-YKE">
+                    <rect key="frame" x="8" y="4" width="52" height="52"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="52" id="bOL-SN-dDl"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rO-X2-oMO">
+                    <rect key="frame" x="68" y="4" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VAQ-CG-dX5">
+                    <rect key="frame" x="68" y="36" width="40" height="20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E3l-30-Kxk">
+                    <rect key="frame" x="332" y="15" width="80" height="31"/>
+                    <state key="normal" title="+ 订阅" backgroundImage="tagButtonBG">
+                        <color key="titleColor" red="1" green="0.1062465422" blue="0.16899437989999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <state key="highlighted" image="tagButtonBG"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="sh4-0W-YKE" firstAttribute="leading" secondItem="W31-8a-PvA" secondAttribute="leading" constant="8" id="Atz-4O-mcF"/>
+                <constraint firstItem="E3l-30-Kxk" firstAttribute="centerY" secondItem="W31-8a-PvA" secondAttribute="centerY" id="Bcj-ly-Rhf"/>
+                <constraint firstAttribute="trailing" secondItem="E3l-30-Kxk" secondAttribute="trailing" constant="8" id="DL4-1v-6Dt"/>
+                <constraint firstItem="sh4-0W-YKE" firstAttribute="top" secondItem="W31-8a-PvA" secondAttribute="top" constant="4" id="HbX-Ch-c74"/>
+                <constraint firstItem="5rO-X2-oMO" firstAttribute="top" secondItem="sh4-0W-YKE" secondAttribute="top" id="T92-HI-yU3"/>
+                <constraint firstItem="VAQ-CG-dX5" firstAttribute="leading" secondItem="5rO-X2-oMO" secondAttribute="leading" id="i0U-CD-ggt"/>
+                <constraint firstAttribute="bottom" secondItem="sh4-0W-YKE" secondAttribute="bottom" constant="4" id="p3V-Jz-lTH"/>
+                <constraint firstItem="5rO-X2-oMO" firstAttribute="leading" secondItem="sh4-0W-YKE" secondAttribute="trailing" constant="8" id="pQx-MB-yC0"/>
+                <constraint firstItem="VAQ-CG-dX5" firstAttribute="bottom" secondItem="sh4-0W-YKE" secondAttribute="bottom" id="yhx-ac-fcV"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="countLable" destination="VAQ-CG-dX5" id="P9m-jH-8dN"/>
+                <outlet property="icon" destination="sh4-0W-YKE" id="Xjr-L6-Tu2"/>
+                <outlet property="nameLable" destination="5rO-X2-oMO" id="3hK-0r-g2t"/>
+            </connections>
+            <point key="canvasLocation" x="512" y="72"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="tagButtonBG" width="80" height="31"/>
+    </resources>
+</document>

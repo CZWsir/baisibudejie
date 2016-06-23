@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CZWadvertController">
+            <connections>
+                <outlet property="adView" destination="Bi1-Mn-mF9" id="nMb-uJ-Shw"/>
+                <outlet property="imageView" destination="uEi-CV-muk" id="nlN-et-S8R"/>
+                <outlet property="jumpButton" destination="8qZ-Yv-U1J" id="f17-rm-kd9"/>
+                <outlet property="view" destination="osH-1g-t3D" id="zdC-Sm-EiM"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="osH-1g-t3D">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uEi-CV-muk">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bi1-Mn-mF9">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8qZ-Yv-U1J">
+                    <rect key="frame" x="246" y="25" width="59" height="34"/>
+                    <color key="backgroundColor" red="0.06693384051322937" green="0.039642833173274994" blue="0.018241005018353462" alpha="0.6171875" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="跳过(3)"/>
+                    <connections>
+                        <action selector="jump:" destination="-1" eventType="touchUpInside" id="j5V-b3-dp2"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Bi1-Mn-mF9" secondAttribute="bottom" id="1SR-Xs-70V"/>
+                <constraint firstAttribute="bottom" secondItem="uEi-CV-muk" secondAttribute="bottom" id="BUc-bX-Nc1"/>
+                <constraint firstAttribute="trailing" secondItem="8qZ-Yv-U1J" secondAttribute="trailing" constant="15" id="D45-0Q-x7Z"/>
+                <constraint firstItem="8qZ-Yv-U1J" firstAttribute="top" secondItem="osH-1g-t3D" secondAttribute="top" constant="25" id="OBz-JR-D7V"/>
+                <constraint firstItem="uEi-CV-muk" firstAttribute="top" secondItem="osH-1g-t3D" secondAttribute="top" id="ReK-Vk-XDG"/>
+                <constraint firstAttribute="trailing" secondItem="uEi-CV-muk" secondAttribute="trailing" id="X3X-cN-VzZ"/>
+                <constraint firstItem="Bi1-Mn-mF9" firstAttribute="leading" secondItem="osH-1g-t3D" secondAttribute="leading" id="dGQ-ks-JNn"/>
+                <constraint firstItem="uEi-CV-muk" firstAttribute="leading" secondItem="osH-1g-t3D" secondAttribute="leading" id="dbk-j7-QdU"/>
+                <constraint firstAttribute="trailing" secondItem="Bi1-Mn-mF9" secondAttribute="trailing" id="ofR-eV-3rF"/>
+                <constraint firstItem="Bi1-Mn-mF9" firstAttribute="top" secondItem="osH-1g-t3D" secondAttribute="top" id="yYo-Du-yBc"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="353" y="-70"/>
+        </view>
+    </objects>
+</document>

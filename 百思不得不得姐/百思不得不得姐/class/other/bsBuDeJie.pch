@@ -1,0 +1,17 @@
+
+
+#define CZWheight [UIScreen mainScreen].bounds.size.height
+#define CZWwidth [UIScreen mainScreen].bounds.size.width
+#import "UIView+bs_frame.h"
+#import "UIBarButtonItem+setButton.h"
+#define CZWLFun CZWLog(@"%@",__func__)
+
+#ifdef DEBUG
+
+#define CZWLog(...) NSLog(__VA_ARGS__)
+
+#else
+
+#define CZWLog(...)
+
+#endif
